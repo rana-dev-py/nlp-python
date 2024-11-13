@@ -1,0 +1,80 @@
+In Natural Language Processing (NLP), **corpus**, **document**, **vocabulary**, **words**, and **tokens** are foundational concepts, each with specific roles in how text data is processed and analyzed. Let’s dive into each concept in depth.
+
+---
+
+### 1. **Corpus**
+
+A **corpus** (plural: corpora) is essentially a large collection of text that serves as the dataset for NLP tasks. This can be anything from a list of sentences, a collection of articles, or entire databases of literature. Some key points about corpora:
+
+- **Purpose**: A corpus serves as the base material for training models, analyzing language, or extracting insights. Examples include the **British National Corpus (BNC)** or **Google Books Ngram**.
+- **Composition**: Corpora are typically annotated or structured to meet specific needs. For instance, corpora used for **sentiment analysis** might include labels indicating sentiment, while corpora used for **POS tagging** will have parts of speech annotated for each word.
+- **Diversity**: A corpus might be designed to cover general language use (like a collection of news articles) or specific domains (like medical texts).
+
+In essence, a corpus is a **central source of raw textual data** on which NLP tasks operate.
+
+---
+
+### 2. **Document**
+
+A **document** is a smaller, individual unit within a corpus. If a corpus is a library, a document is like a single book or article within it. In NLP:
+
+- **Definition**: A document can be as short as a single sentence or as lengthy as a book, but it’s typically a logical grouping of text (e.g., a paragraph, an article).
+- **Granularity**: For some NLP tasks, a document is considered the "unit of analysis." For instance, in **topic modeling**, each document could represent an article with a distinct theme.
+- **Structure**: Documents are often formatted consistently, with sections, sentences, and possibly annotations depending on the task.
+
+So, a document is essentially a **self-contained piece of text** within a larger corpus, often with its own cohesive structure.
+
+---
+
+### 3. **Vocabulary**
+
+**Vocabulary** in NLP refers to the set of unique words or tokens present in a corpus or a document. Some details to note:
+
+- **Uniqueness**: The vocabulary only contains **unique items**—no duplicates. For instance, if the words "dog," "bark," and "run" appear multiple times in the text, they only appear once in the vocabulary.
+- **Scope**: Vocabulary size can vary based on processing steps. A **full vocabulary** might include all words, while a **restricted vocabulary** could exclude certain words (like stopwords or rare words).
+- **Practical Use**: Vocabulary size is critical for tasks like text classification and language modeling, as it defines the dimensions of word embeddings and influences the computational cost.
+
+In summary, vocabulary is the **set of all distinct linguistic elements** (usually words or tokens) used within a particular text dataset.
+
+---
+
+### 4. **Words**
+
+**Words** are the basic building blocks of language and represent the smallest unit of meaning in text that is used in most NLP tasks. However, in NLP, "words" can be defined in different ways:
+
+- **Linguistic Word**: The natural linguistic units that humans understand as words, such as "computer," "run," or "happy."
+- **Morphological Complexity**: Some languages and texts may contain **compound words** (e.g., "notebook") or **inflected forms** (like "running" from "run"), where each variation might represent a distinct word depending on the task.
+- **Word Forms**: NLP often needs to account for different forms of a word, like stemming or lemmatization (e.g., "running" and "run" being reduced to a common root).
+
+In short, words are the **basic linguistic units of text** with meaning, although their interpretation in NLP may vary based on preprocessing and task requirements.
+
+---
+
+### 5. **Token**
+
+A **token** is any instance of a word, symbol, or other linguistic unit that has been extracted from a document or corpus through a process called **tokenization**. Tokenization is a critical preprocessing step in NLP, as it transforms raw text into structured data. Here’s how tokens function:
+
+- **Definition**: Tokens are the units that an NLP model will interact with directly. In NLP, **tokenization** is the process of splitting text into tokens based on whitespace, punctuation, or custom delimiters.
+- **Types of Tokens**:
+  - **Word Tokens**: The most common type, where each word is treated as a separate token.
+  - **Subword Tokens**: Especially in languages with compound words or in **Byte Pair Encoding (BPE)**, tokens can be subword units (e.g., splitting "running" into "run" and "-ing").
+  - **Character Tokens**: In tasks where fine-grained detail is important, each character may be a token.
+- **Token vs. Word**: While words are generally linguistic units of meaning, tokens are **more flexible**. For example, "I'm" could be one token, or it could be split into "I" and "'m" as two tokens.
+
+Tokens are the **units that NLP models process**, and their granularity can impact model performance.
+
+---
+
+### Summary Table
+
+| Concept      | Description                                                                                       | Example in NLP      |
+|--------------|---------------------------------------------------------------------------------------------------|----------------------|
+| **Corpus**   | A large dataset or collection of text documents                                                   | Wikipedia corpus    |
+| **Document** | A single text unit within a corpus                                                                | A single article    |
+| **Vocabulary** | The set of unique words or tokens within a corpus or document                                     | {"run", "jump"}     |
+| **Words**    | Basic units of meaning in text, often identifiable without NLP preprocessing                      | "dog", "run"        |
+| **Tokens**   | NLP-specific units derived through tokenization (could be words, subwords, or characters)         | "running" → ["run", "ning"] |
+
+--- 
+
+In summary, **each of these concepts represents a different level of granularity and focus in text processing**, from the broader corpus to the individual tokens. Understanding these distinctions is essential, as each plays a unique role in how NLP systems interpret and analyze language data.
